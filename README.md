@@ -20,7 +20,7 @@
 
 ## :rocket: Desafios
 
-- [Formulário e Rota de cadastro do Professor](/04-3-formulario-rota-cadastro-professor)
+- [Formulário e Rota de cadastro do Professor](/04-3-form-and-routes-teacher)
 
 ## :memo: Licença
 
