@@ -1,0 +1,13 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/18080063?s=400&u=b4d127d84cc7d2813b459e2cf98f5a7222b9ef5c&v=4",
+      "name": "wasley araujo dos santos",
+      "birth": 844992000000,
+      "class_type": "presencial",
+      "services": "NodeJS",
+      "created_at": 1620696803144
+    }
+  ]
+}

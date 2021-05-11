@@ -1,0 +1,24 @@
+{
+  "name": "preply",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:3335 --files 'public,views'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.22.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.3"
+  }
+}

@@ -1,0 +1,68 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<form class="card" method="POST" action="/teachers">
+
+  <section class="avatar" style="background: url(https://source.unsplash.com/collection/94804057/500x500)no-repeat center center / cover;"></section>
+  <section class="details">
+    <h3>Novo Professor</h3>
+
+    <div class="item">
+      <div>Avatar URL</div>
+      <div>
+        <input type="url" name="avatar_url" placeholder="http://">
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Nome completo</div>
+      <div>
+        <input type="text" name="name">
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Data de nascimento</div>
+        <input type="date" name="birth">
+    </div>
+
+    <div class="item">
+      <div>Grau de escolaridade</div>
+      <div>
+        <select name="select">
+          <option value="Ensino médio">Ensino médio</option>
+          <option value="Ensino Superior">Ensino Superior</option>
+          <option value="Mestrado">Mestrado</option>
+          <option value="Doutorado">Doutorado</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Tipo de aula</div>
+      <div>
+        <span>
+          <input type="radio" name="class_type" value="presencial" checked="checked">Presencial
+        </span>
+
+        <span> 
+          <input type="radio" name="class_type" value="ead">EAD
+        </span>
+        
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Área de atuação</div>
+        <input
+        type="text"
+        name="services"
+        placeholder="separe os serviços prestados por vírgula"
+        >
+    </div>
+
+    <button type="submit">Salvar</button>
+
+  </section>
+</form>
+{% endblock content %}
