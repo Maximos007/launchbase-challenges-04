@@ -1,5 +1,7 @@
 const fs = require('fs');
 const data = require('./data.json');
+// eslint-disable-next-line no-unused-vars
+const { age, graduation, date } = require('./utils');
 
 module.exports = {
   
@@ -38,5 +40,26 @@ module.exports = {
 		});
 
 	},
+
+	show(req, res) {
+
+		const { id } = req.params;
+
+		const foundTeacher = data.teachers.find(teacher => {
+			return teacher.id == id;
+		});
+
+		if(!foundTeacher) return res.send('Teacher not found!');
+
+		const teachers = {
+			...foundTeacher,
+			services: foundTeacher.services.split(','),
+			age: age(foundTeacher.birth),
+			created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
+			education: graduation(foundTeacher.education),
+		};
+
+		return res.render('teachers/show', { teachers});
+	}
 
 };

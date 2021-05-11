@@ -14,6 +14,8 @@ routes.get('/teachers/create', (req, res) => {
 	return res.render('teachers/create');
 });
 
+routes.get('/teachers/:id', teachers.show);
+
 routes.post('/teachers', teachers.create); // Formulário 
 
 routes.get('/students', (req, res) => {
