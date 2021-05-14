@@ -21,6 +21,7 @@
 ## :rocket: Desafios
 
 - [Formulário e Rota de cadastro do Professor](/04-3-form-and-routes-teacher)
+- [Apresentação, edição e formatação dos dados de um professor](/04-4-show-edit-format-teacher)
 
 ## :memo: Licença
 
