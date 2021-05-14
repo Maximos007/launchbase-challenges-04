@@ -1,0 +1,13 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<form class="card" method="POST" action="/teachers" >
+  <section class="avatar"style="background: url(https://source.unsplash.com/collection/94804057/500x500)no-repeat center center / cover;"></section>
+  <section class="details">
+    <h3>Editar Professor</h3>
+
+    {% include 'teachers/fields.html' %}
+
+  </section>
+</form>
+{% endblock content %}

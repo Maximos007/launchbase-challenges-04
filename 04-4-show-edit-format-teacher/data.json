@@ -1,3 +1,14 @@
 {
-  "teachers": []
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/18080063?s=400&u=b4d127d84cc7d2813b459e2cf98f5a7222b9ef5c&v=4",
+      "name": "Bianca Gontijo",
+      "birth": 893980800000,
+      "education": "doutorado",
+      "class_type": "Presencial",
+      "services": "Química, Português, Geografia",
+      "created_at": 1621024720426
+    }
+  ]
 }

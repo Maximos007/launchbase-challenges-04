@@ -1,3 +1,12 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Luana Alves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18080063?s=400&u=b4d127d84cc7d2813b459e2cf98f5a7222b9ef5c&v=4",
+      "birth": "1996-10-11T00:00:00.000Z",
+      "category": "presencial",
+      "created_at": "2021-05-13T20:29:04.760Z"
+    }
+  ]
 }

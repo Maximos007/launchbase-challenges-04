@@ -16,6 +16,8 @@ routes.get('/teachers/create', (req, res) => {
 
 routes.get('/teachers/:id', teachers.show);
 
+routes.get('/teachers/:id/edit', teachers.update);
+
 routes.post('/teachers', teachers.create); // Formulário 
 
 routes.get('/students', (req, res) => {

@@ -7,7 +7,7 @@ module.exports = {
 		const month = today.getMonth() - birthDay.getMonth();
 
 		if (month < 0 || month ==0 && today.getDate() < birthDay.getDate()) {
-			age -= 1;
+			age = age - 1;
 		}
 
 		return age;
