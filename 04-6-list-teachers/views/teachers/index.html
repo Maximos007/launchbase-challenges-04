@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block content %}
+<div class="card table-container">
+    <table width="100%">
+      <thead>
+        <tr>
+          <th>Professor</th>
+          <th>Atendimento</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for teacher in teachers %}
+        <tr>
+          <td><span style="background-image: url({{teacher.avatar_url}});"></span>{{ teacher.name }}</td>
+          <td>
+            {% for service in teacher.services.split(',') %}
+              <span class="services">{{service}}</span>
+            {% endfor %}
+          </td>
+          <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+        </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </section>
+</div>
+{% endblock content %}
