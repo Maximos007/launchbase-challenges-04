@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  {% block head %}
+    <title>School</title>
+  {% endblock %}
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class='links'>
+      <a href="/" class="active">Professor</a>
+      <a href="/students">Alunos</a> 
+    </div>
+  </header>
+
+  {% block content %}
+
+  {% endblock %}
+
+</body>
+</html>
