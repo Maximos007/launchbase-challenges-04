@@ -5,7 +5,9 @@
   --background-color: #3EB595;
   --background-header: #FFF447;
   --color-text: #161b3d;
-  --color-body: #fff;
+  --background-button: #161b3d;
+  --color-body: rgb(243, 247, 247);
+  --color-card: #FFFFFF;
 }
 
 * {
@@ -16,7 +18,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--primary-color);
+  background-color: var(--color-body);
 }
 
 header {
@@ -72,7 +74,8 @@ header {
 /* ==== CARD ==== */
 
 .card {
-  background-color: white;
+  /* background-color: #f5f5f5; */
+  background-color: var(--color-card);
   width: 800px;
   min-height:400px;
 
@@ -138,7 +141,8 @@ header {
   color: var(--primary-color);
 }
 
-.details .item span {
+.details .item span,
+ span.services {
   padding: 8px 16px;
   background-color: #FFF447;
   border-radius: 16px;
@@ -174,11 +178,12 @@ input::placeholder {
 button[type="submit"],
 a.button {
   padding: 8px 32px;
-  background-color: #020202;
+  background-color: var(--background-button);
   color: white;
   border-radius: 4px;
   width: 100%;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 a.button {
@@ -240,7 +245,8 @@ tbody tr td:first-child span {
   border: 2px solid white;
 }
 
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a{
   background-color: #161b3d;
   padding: 8px 16px;
   text-decoration: none;
@@ -248,6 +254,11 @@ tbody tr td:last-child a {
   color: white;
   font-size: 12px;
   border-radius: 6px;
+}
+
+.table-container > a {
+  margin-bottom: 16px;
+  display: inline-block;
 }
 
 .table-container thead tr th:last-child,

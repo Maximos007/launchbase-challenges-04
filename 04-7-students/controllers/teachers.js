@@ -1,7 +1,7 @@
 const fs = require('fs');
-const data = require('./data.json');
+const data = require('../data.json');
 // eslint-disable-next-line no-unused-vars
-const { age, graduation, date } = require('./utils');
+const { age, graduation, date } = require('../utils');
 
 module.exports = {
 
@@ -9,8 +9,12 @@ module.exports = {
 
 		return res.render('teachers/index', { teachers: data.teachers });
 	},
-  
+
 	create(req, res) {
+		return res.render('teachers/create');
+	},
+  
+	post(req, res) {
 		const keys = Object.keys(req.body);
 
 		// eslint-disable-next-line no-undef
@@ -25,7 +29,11 @@ module.exports = {
 
 		birth = Date.parse(birth);
 		const created_at = Date.now();
-		const id = Number(data.teachers.length + 1);
+		let id = 1;
+		const lastTeacher = data.teachers[data.teachers.length - 1];
+		if (lastTeacher) {
+			id = lastTeacher.id + 1;
+		}
 
 		data.teachers.push({
 			id,
@@ -67,7 +75,7 @@ module.exports = {
 		return res.render('teachers/show', { teachers });
 	},
 
-	update(req, res) {
+	edit(req, res) {
 
 		const { id } = req.params;
 
@@ -79,7 +87,7 @@ module.exports = {
 
 		const teachers = {
 			...foundTeacher,
-			birth: date(foundTeacher.birth),
+			birth: date(foundTeacher.birth).iso
 		};
 
 		return res.render('teachers/edit', { teachers });

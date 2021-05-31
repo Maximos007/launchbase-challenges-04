@@ -1,5 +1,6 @@
 const express = require('express');
-const teachers = require('./teachers');
+const teachers = require('./controllers/teachers');
+const students = require('./controllers/students');
 const routes = express.Router();
 
 routes.get('/', (req, res) => {
@@ -7,23 +8,19 @@ routes.get('/', (req, res) => {
 });
 
 routes.get('/teachers', teachers.index);
-
-routes.get('/teachers/create', (req, res) => {
-	return res.render('teachers/create');
-});
-
+routes.get('/teachers/create', teachers.create);
 routes.get('/teachers/:id', teachers.show);
-
-routes.get('/teachers/:id/edit', teachers.update);
-
-routes.post('/teachers', teachers.create); // Formulário 
-
+routes.get('/teachers/:id/edit', teachers.edit);
+routes.post('/teachers', teachers.post);
 routes.put('/teachers', teachers.put);
-
 routes.delete('/teachers', teachers.delete);
 
-routes.get('/students', (req, res) => {
-	return res.send('alunos');
-});
 
+routes.get('/students', students.index);
+routes.get('/students/create', students.create);
+routes.get('/students/:id', students.show);
+routes.get('/students/:id/edit', students.edit);
+routes.post('/students', students.post);
+routes.put('/students', students.put);
+routes.delete('/students', students.delete);
 module.exports = routes;

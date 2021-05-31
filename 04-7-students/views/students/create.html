@@ -1,0 +1,15 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+<form class="card" method="POST" action="/students" >
+  <section class="avatar"style="background: url({{students.avatar_url}})no-repeat center center / cover;"></section>
+  <section class="details">
+    <h3>Novo aluno</h3>
+
+    {% include 'students/fields.html' %}
+
+    <button type="submit">Salvar</button>
+
+  </section>
+</form>
+{% endblock content %}

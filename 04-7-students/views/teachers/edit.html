@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="card">
-  <section class="avatar" style="background: url(https://source.unsplash.com/collection/8874679/500x500) no-repeat center center / cover; border-radius: 4px 0 0 4px;"></section>
+  <section class="avatar" style="background: url({{teachers.avatar_url}}) no-repeat center center / cover; border-radius: 4px 0 0 4px;"></section>
   <section class="details">
       <form method="POST" action="/teachers?_method=PUT">
 
@@ -17,6 +17,17 @@
           <input type="hidden" name="id" value="{{teachers.id}}">
           <button type="submit">Excluir</button>
       </form>
+
+      <script>
+        const formDelete = document.querySelector('#delete-form')
+        formDelete.addEventListener('submit', function(event) {
+          const confirmation = confirm('Deseja Deletar?')
+          if(!confirmation) {
+              event.preventDefault()
+          }
+        })
+    </script>
+
   </section>
 </div>
 {% endblock content %}
