@@ -24,7 +24,7 @@
 - [Apresentação, edição e formatação dos dados de um professor](/04-4-show-edit-format-teacher)
 - [HTTP: PUT e DELETE](/04-5-put-delete-teacher)
 - [Listagem de professores](/04-6-list-teachers)
-- [Estruturando estudantes](/04-7-estruturando-estudantes)
+- [Estruturando estudantes](/04-7-students)
 
 ## :memo: Licença
 
