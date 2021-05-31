@@ -22,6 +22,9 @@
 
 - [Formulário e Rota de cadastro do Professor](/04-3-form-and-routes-teacher)
 - [Apresentação, edição e formatação dos dados de um professor](/04-4-show-edit-format-teacher)
+- [HTTP: PUT e DELETE](/04-5-put-delete)
+- [Listagem de professores](/04-6-listagem-professores)
+- [Estruturando estudantes](/04-7-estruturando-estudantes)
 
 ## :memo: Licença
 
