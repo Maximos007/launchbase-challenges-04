@@ -47,8 +47,8 @@ module.exports = {
 		fs.writeFile('data.json', JSON.stringify(data, null, 2), (err) => {
 			if (err) return res.send('Write file error!');
 
-			return res.redirect('/students');
-			// return res.send('was successfully created'); // /students
+			// return res.redirect('/students');
+			return res.send('was successfully created'); // /students
 		});
 
 	},
